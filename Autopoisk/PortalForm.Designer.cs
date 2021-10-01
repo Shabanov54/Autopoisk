@@ -1,7 +1,7 @@
 ﻿
 namespace PortalMazda
 {
-    partial class Form1
+    partial class WindowForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace PortalMazda
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WindowForm));
             this.BrowserPanel = new System.Windows.Forms.Panel();
             this.downloadGIF = new System.Windows.Forms.PictureBox();
             this.BrowserPanel.SuspendLayout();
@@ -38,8 +38,8 @@ namespace PortalMazda
             // 
             // BrowserPanel
             // 
-            this.BrowserPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.BrowserPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BrowserPanel.Controls.Add(this.downloadGIF);
             this.BrowserPanel.Location = new System.Drawing.Point(1, 0);
@@ -49,8 +49,8 @@ namespace PortalMazda
             // 
             // downloadGIF
             // 
-            this.downloadGIF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.downloadGIF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.downloadGIF.Image = ((System.Drawing.Image)(resources.GetObject("downloadGIF.Image")));
             this.downloadGIF.Location = new System.Drawing.Point(277, 114);
@@ -60,15 +60,15 @@ namespace PortalMazda
             this.downloadGIF.TabIndex = 0;
             this.downloadGIF.TabStop = false;
             // 
-            // Form1
+            // WindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BrowserPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Portal.mazdaeur.com";
+            this.Name = "WindowForm";
+            this.Text = "Portal";
             this.BrowserPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.downloadGIF)).EndInit();
             this.ResumeLayout(false);

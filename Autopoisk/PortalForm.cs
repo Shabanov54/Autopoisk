@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace PortalMazda
 {
-    public partial class Form1 : Form
+    public partial class WindowForm : Form
     {
         WebBrowser webBrowser = new WebBrowser();
         string _url = "https://mapps.mazdaeur.com/cas/login?service=https%3a%2f%2fportal.mazdaeur.com%2f";
-        public Form1()
+        public WindowForm()
         {
             InitializeComponent();
             ProxyControl.Set("127.0.0.1:8888");
@@ -23,7 +23,7 @@ namespace PortalMazda
             webBrowser.Dock = DockStyle.Fill;
             webBrowser.Navigate($"{_url}");
             this.BrowserPanel.Controls.Add(webBrowser);
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void webBrowserComleted(object sender, WebBrowserDocumentCompletedEventArgs e)
