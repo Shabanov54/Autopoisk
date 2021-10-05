@@ -6,16 +6,17 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace WcfService
-{
-    public class ServiceLibs : ServiceILibs
+    namespace WcfService
     {
-        public string TimerDownloads(string timer)
+        public class ServiceLibs : IServiceLibs
         {
-            string outputMessage;
+            public string TimerDownloads(string timer)
+            {
+                string outputMessage;
 
-            return outputMessage = "Время потраченное на загрузку страницы : " + timer; 
+                return outputMessage = "Время потраченное на загрузку страницы : " + timer;
+            }
         }
     }
 
-}
+
