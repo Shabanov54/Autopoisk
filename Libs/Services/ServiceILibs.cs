@@ -1,8 +1,12 @@
 ﻿using System;
+using System.ServiceModel;
 
 namespace Services
 {
-    public class ServiceILibs
+    [ServiceContract]
+    public interface ServiceILibs
     {
+        [OperationContract]
+        string TimerDownloads(string timer);
     }
 }
