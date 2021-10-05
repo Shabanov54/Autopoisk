@@ -6,7 +6,9 @@ namespace Services
     {
         public string TimerDownloads(string timer)
         {
-            return timer;
+            string outputMessage;
+
+            return outputMessage = "Время потраченное на загрузку страницы : " + timer; ;
         }
     }
 }
