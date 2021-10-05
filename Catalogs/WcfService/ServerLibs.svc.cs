@@ -14,7 +14,7 @@ namespace WcfService
         {
             string outputMessage;
 
-            return outputMessage = "Время потраченное на загрузку страницы : " + timer; ;
+            return outputMessage = "Время потраченное на загрузку страницы : " + timer; 
         }
     }
 
