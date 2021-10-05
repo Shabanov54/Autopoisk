@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Support", "..\..\Libs\Suppo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLibrary", "..\..\Libs\WcfServiceLibrary\WcfServiceLibrary.csproj", "{43225887-B992-48B8-B171-BA4A1C2492EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "..\WcfService\WcfService.csproj", "{89EDBFDB-3CB4-4F3E-B86E-02FB69C16205}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{43225887-B992-48B8-B171-BA4A1C2492EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43225887-B992-48B8-B171-BA4A1C2492EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43225887-B992-48B8-B171-BA4A1C2492EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89EDBFDB-3CB4-4F3E-B86E-02FB69C16205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89EDBFDB-3CB4-4F3E-B86E-02FB69C16205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89EDBFDB-3CB4-4F3E-B86E-02FB69C16205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89EDBFDB-3CB4-4F3E-B86E-02FB69C16205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
