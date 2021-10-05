@@ -12,7 +12,7 @@ using System.ServiceModel;
 
             var host = new ServiceHost(typeof(ServiceLibs), new Uri($"net.tcp://{serviceAddress}/{serviceName}"));
             var serverBinding = new NetTcpBinding();
-            host.AddServiceEndpoint(typeof(ITransferObject), serverBinding, "");
+            host.AddServiceEndpoint(typeof(ServiceILibs), serverBinding, "");
             host.Open();
         }
     }
