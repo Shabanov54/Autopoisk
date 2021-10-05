@@ -6,8 +6,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PortalMazda
-{
     public static class ProxyControl
     {
         #region //wininet Interop
@@ -225,4 +223,3 @@ namespace PortalMazda
             }
         }
     }
-}

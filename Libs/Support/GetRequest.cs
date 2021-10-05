@@ -5,8 +5,6 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PortalMazda
-{
     class GetRequest
     {
         private string url;
@@ -28,4 +26,3 @@ namespace PortalMazda
             //ProxyControl.Set("127.0.0.1:8888");
         }
     }
-}
