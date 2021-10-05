@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalogs", "Catalogs", "{68
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Support", "..\..\Libs\Support\Support.csproj", "{37505730-A3D3-4C24-84A0-7FE9C40F4AB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLibrary", "..\..\Libs\WcfServiceLibrary\WcfServiceLibrary.csproj", "{43225887-B992-48B8-B171-BA4A1C2492EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{37505730-A3D3-4C24-84A0-7FE9C40F4AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37505730-A3D3-4C24-84A0-7FE9C40F4AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37505730-A3D3-4C24-84A0-7FE9C40F4AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43225887-B992-48B8-B171-BA4A1C2492EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43225887-B992-48B8-B171-BA4A1C2492EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43225887-B992-48B8-B171-BA4A1C2492EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43225887-B992-48B8-B171-BA4A1C2492EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{33E9CC79-8733-4375-B087-3815163419F2} = {680D26B9-7F94-4023-92F2-AF32403BE37B}
 		{37505730-A3D3-4C24-84A0-7FE9C40F4AB6} = {7A0C0BD1-06F8-4837-A961-C2D0FEA5C6ED}
+		{43225887-B992-48B8-B171-BA4A1C2492EE} = {7A0C0BD1-06F8-4837-A961-C2D0FEA5C6ED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14BEC549-B184-4570-9EE9-05A016A404C8}
