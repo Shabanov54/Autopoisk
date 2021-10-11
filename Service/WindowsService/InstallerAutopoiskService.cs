@@ -22,7 +22,7 @@ namespace WindowsService
             processInstaller = new ServiceProcessInstaller();
 
             processInstaller.Account = ServiceAccount.LocalSystem;
-            serviceInstaller.ServiceName = "AutopoiskService2";
+            serviceInstaller.ServiceName = "AutopoiskService";
             serviceInstaller.StartType = ServiceStartMode.Automatic;
             Installers.Add(processInstaller);
             Installers.Add(serviceInstaller);

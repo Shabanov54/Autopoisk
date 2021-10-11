@@ -25,7 +25,7 @@ namespace WindowsService
         private static void StartService()
         {
             ServiceController service = new ServiceController();
-            service.ServiceName = "AutopoiskService2";
+            service.ServiceName = "AutopoiskService";
             service.Start();
         }
 
@@ -49,7 +49,7 @@ namespace WindowsService
             public void Start()
             {
                 var serviceAddress = "127.0.0.1:10000";
-                var serviceName = "AutopoiskService2";
+                var serviceName = "AutopoiskService";
 
                 var host = new ServiceHost(typeof(ServiceLib.ServiceLib), new Uri($"net.tcp://{serviceAddress}/{serviceName}"));
                 var serverBinding = new NetTcpBinding();
