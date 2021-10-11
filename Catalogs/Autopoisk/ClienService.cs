@@ -17,7 +17,7 @@ namespace PortalMazda
             Uri tcpUri = new Uri($"net.tcp://{serviceAddress}/{serviceName}");
             EndpointAddress address = new EndpointAddress(tcpUri);
             NetTcpBinding clientBinding = new NetTcpBinding();
-            ChannelFactory<ServiceLibs.IServiceLib> factory = new ChannelFactory<ServiceLibs.IServiceLib>(clientBinding, address);
+            ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, address);
             var service = factory.CreateChannel();
 
             string massage = service.TimerDownloads(timeTomessage);

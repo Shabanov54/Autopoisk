@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ServiceLibs
+namespace ServiceLib
 {
-    public class ServiceLibs : IServiceLib
+    public class ServiceLib : IServiceLib
     {
         public string TimerDownloads(string timer)
         {

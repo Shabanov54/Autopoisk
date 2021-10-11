@@ -29,7 +29,8 @@ namespace PortalMazda
             webBrowser.Navigate($"{_url}");
             this.BrowserPanel.Controls.Add(webBrowser);
             this.WindowState = FormWindowState.Maximized;
-            timeStart = DateTime.Now;
+
+            
         }
 
         private void webBrowserComleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -38,12 +39,12 @@ namespace PortalMazda
             if (webBrowser.ReadyState == WebBrowserReadyState.Uninitialized || webBrowser.ReadyState == WebBrowserReadyState.Loading || webBrowser.ReadyState == WebBrowserReadyState.Loaded)
             {
                 downloadGIF.Visible = true;
-                timeEnd = DateTime.Now;
+                timeStart = DateTime.Now;
             }
             if (webBrowser.ReadyState == WebBrowserReadyState.Complete)
             {
                 downloadGIF.Visible = false;
-
+                timeEnd = DateTime.Now;
                 time = timeEnd.Subtract(timeStart);
                 timeTomessage = $"{time.Seconds} : {time.Milliseconds}";
                 ClienService.ClientServiceRun(timeTomessage);

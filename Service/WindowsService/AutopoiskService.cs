@@ -38,9 +38,9 @@ namespace WindowsService
                 var serviceAddress = "127.0.0.1:10000";
                 var serviceName = "AutopoiskService";
 
-                var host = new ServiceHost(typeof(ServiceLibs.ServiceLibs), new Uri($"net.tcp://{serviceAddress}/{serviceName}"));
+                var host = new ServiceHost(typeof(ServiceLib.ServiceLib), new Uri($"net.tcp://{serviceAddress}/{serviceName}"));
                 var serverBinding = new NetTcpBinding();
-                host.AddServiceEndpoint(typeof(ServiceLibs.IServiceLib), serverBinding, "");
+                host.AddServiceEndpoint(typeof(ServiceLib.IServiceLib), serverBinding, "");
                 host.Open();
 
             }

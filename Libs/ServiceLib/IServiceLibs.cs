@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ServiceModel;
 
-namespace ServiceLibs
+namespace ServiceLib
 {
     [ServiceContract]
     public interface IServiceLib
