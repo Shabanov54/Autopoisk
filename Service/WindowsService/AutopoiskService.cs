@@ -40,7 +40,6 @@ namespace WindowsService
         }
         class ServerService
         {
-            bool enable = true;
             public void Start()
             {
                 var serviceAddress = "127.0.0.1:10000";
@@ -53,7 +52,7 @@ namespace WindowsService
             }
             public void Stop()
             {
-                enable = false;
+
             }
         }
     }
