@@ -22,10 +22,11 @@ namespace WindowsService
             StartService();
         }
 
-        private static void StartService()
+        public void StartService()
         {
             ServiceController service = new ServiceController();
             service.ServiceName = "AutopoiskService";
+            service.MachineName = "lockal";
             service.Start();
         }
 
