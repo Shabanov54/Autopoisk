@@ -36,7 +36,6 @@ namespace WindowsService
         }
         protected override void OnStart(string[] args)
         {
-            
             server = new ServerService();
             Thread serverService = new Thread(new ThreadStart(server.Start));
             serverService.Start();
