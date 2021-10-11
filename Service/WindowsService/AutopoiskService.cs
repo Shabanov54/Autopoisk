@@ -20,16 +20,7 @@ namespace WindowsService
         public AutopoiskService()
         {
             InitializeComponent();
-            //StartService();
         }
-
-        //public void StartService()
-        //{
-        //    ServiceController service = new ServiceController();
-        //    service.ServiceName = "AutopoiskService";
-        //    service.MachineName = "lockal";
-        //    service.Start();
-        //}
 
         protected override void OnStart(string[] args)
         {
