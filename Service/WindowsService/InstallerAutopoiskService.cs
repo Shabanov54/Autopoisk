@@ -21,7 +21,7 @@ namespace WindowsService
             serviceInstaller = new ServiceInstaller();
             processInstaller = new ServiceProcessInstaller();
 
-            processInstaller.Account = ServiceAccount.LocalService;
+            processInstaller.Account = ServiceAccount.LocalSystem;
             serviceInstaller.StartType = ServiceStartMode.Manual;
             serviceInstaller.ServiceName = "AutopoiskService";
             serviceInstaller.StartType = ServiceStartMode.Automatic;

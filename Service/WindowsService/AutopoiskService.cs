@@ -19,16 +19,23 @@ namespace WindowsService
         public AutopoiskService()
         {
             InitializeComponent();
-            this.CanStop = true;
-            this.CanPauseAndContinue = true;
-            this.AutoLog = true;
+            StartService();
         }
+
+        private static void StartService()
+        {
+            ServiceController service = new ServiceController();
+            service.ServiceName = "AutopoiskService";
+            service.Start();
+        }
+
         public void onDebug()
         {
             OnStart(null);
         }
         protected override void OnStart(string[] args)
         {
+            
             server = new ServerService();
             Thread serverService = new Thread(new ThreadStart(server.Start));
             serverService.Start();
