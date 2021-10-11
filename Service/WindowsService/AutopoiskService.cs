@@ -8,12 +8,14 @@ using System.Linq;
 using System.ServiceModel;
 using System.ServiceProcess;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WindowsService
 {
     public partial class AutopoiskService : ServiceBase
     {
+        ServerService server;
         public AutopoiskService()
         {
             InitializeComponent();
@@ -21,10 +23,14 @@ namespace WindowsService
 
         protected override void OnStart(string[] args)
         {
+            server = new ServerService();
+            Thread serverService = new Thread(new ThreadStart(server.Start));
+            serverService.Start();
         }
 
         protected override void OnStop()
         {
+            server.Stop();
         }
         class ServerService
         {
