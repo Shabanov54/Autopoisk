@@ -14,7 +14,11 @@ namespace PortalMazda
     {
         WebBrowser webBrowser = new WebBrowser();
         string _url = "https://mapps.mazdaeur.com/cas/login?service=https%3a%2f%2fportal.mazdaeur.com%2f";
-        
+        DateTime timeEnd;
+        DateTime timeStart;
+        TimeSpan time;
+        string timeTomessage;
+        ClienService ClienService = new ClienService();
         public WindowForm()
         {
             InitializeComponent();
@@ -25,7 +29,7 @@ namespace PortalMazda
             webBrowser.Navigate($"{_url}");
             this.BrowserPanel.Controls.Add(webBrowser);
             this.WindowState = FormWindowState.Maximized;
-
+            timeStart = DateTime.Now;
         }
 
         private void webBrowserComleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -34,11 +38,15 @@ namespace PortalMazda
             if (webBrowser.ReadyState == WebBrowserReadyState.Uninitialized || webBrowser.ReadyState == WebBrowserReadyState.Loading || webBrowser.ReadyState == WebBrowserReadyState.Loaded)
             {
                 downloadGIF.Visible = true;
-
+                timeEnd = DateTime.Now;
             }
             if (webBrowser.ReadyState == WebBrowserReadyState.Complete)
             {
                 downloadGIF.Visible = false;
+
+                time = timeEnd.Subtract(timeStart);
+                timeTomessage = $"{time.Seconds} : {time.Milliseconds}";
+                ClienService.ClientServiceRun(timeTomessage);
             }
         }
     }

@@ -44,6 +44,10 @@ namespace WindowsService
                 host.Open();
 
             }
+            public void Stop()
+            {
+
+            }
         }
     }
 }
