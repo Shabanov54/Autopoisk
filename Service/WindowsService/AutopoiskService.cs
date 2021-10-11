@@ -30,10 +30,10 @@ namespace WindowsService
             service.Start();
         }
 
-        public void onDebug()
-        {
-            OnStart(null);
-        }
+        //public void onDebug()
+        //{
+        //    OnStart(null);
+        //}
         protected override void OnStart(string[] args)
         {
             server = new ServerService();
