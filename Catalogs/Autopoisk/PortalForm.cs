@@ -47,7 +47,8 @@ namespace PortalMazda
                 timeEnd = DateTime.Now;
                 time = timeEnd.Subtract(timeStart);
                 timeTomessage = $"{time.Seconds} : {time.Milliseconds}";
-                ClienService.ClientServiceRun(timeTomessage);
+                string messageBox = ClienService.ClientServiceRun(timeTomessage);
+                MessageBox.Show($"{messageBox}");
             }
         }
     }

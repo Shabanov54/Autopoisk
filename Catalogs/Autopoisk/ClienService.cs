@@ -9,7 +9,7 @@ namespace PortalMazda
 {
     class ClienService
     {
-        public void ClientServiceRun(string timeTomessage)
+        public string ClientServiceRun(string timeTomessage)
         {
             var serviceAddress = "127.0.0.1:10000";
             var serviceName = "AutopoiskService";
@@ -21,6 +21,7 @@ namespace PortalMazda
             var service = factory.CreateChannel();
 
             string massage = service.TimerDownloads(timeTomessage);
+            return massage;
         }
 
     }

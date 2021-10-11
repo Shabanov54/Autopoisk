@@ -35,24 +35,22 @@ namespace WindowsService
         class ServerService
         {
             bool enable = true;
-            public ServerService()
-            {
-
-            }
             public void Start()
             {
-                var serviceAddress = "127.0.0.1:10000";
-                var serviceName = "AutopoiskService";
+                while (enable)
+                {
+                    var serviceAddress = "127.0.0.1:10000";
+                    var serviceName = "AutopoiskService";
 
-                var host = new ServiceHost(typeof(ServiceLib.ServiceLib), new Uri($"net.tcp://{serviceAddress}/{serviceName}"));
-                var serverBinding = new NetTcpBinding();
-                host.AddServiceEndpoint(typeof(ServiceLib.IServiceLib), serverBinding, "");
-                host.Open();
-
+                    var host = new ServiceHost(typeof(ServiceLib.ServiceLib), new Uri($"net.tcp://{serviceAddress}/{serviceName}"));
+                    var serverBinding = new NetTcpBinding();
+                    host.AddServiceEndpoint(typeof(ServiceLib.IServiceLib), serverBinding, "");
+                    host.Open();
+                }
             }
             public void Stop()
             {
-
+                enable = false;
             }
         }
     }
