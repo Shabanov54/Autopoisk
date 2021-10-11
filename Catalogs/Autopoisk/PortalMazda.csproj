@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Libs\Support\Support.csproj" />
+    <ProjectReference Include="..\..\Service\WindowsService\WindowsService.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,7 +4,7 @@ using System.ServiceModel;
 namespace ServiceLibs
 {
     [ServiceContract]
-    public interface ServiceILibs
+    public interface IServiceLib
     {
         [OperationContract]
         string TimerDownloads(string timer);

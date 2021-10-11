@@ -2,7 +2,7 @@
 
 namespace ServiceLibs
 {
-    public class ServiceLibs : ServiceILibs
+    public class ServiceLibs : IServiceLib
     {
         public string TimerDownloads(string timer)
         {
