@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace WindowsService
 {
     [RunInstaller(true)]
-    public partial class InstallerAutopoiskService : Installer
+    public partial class InstallerAutopoiskService : System.Configuration.Install.Installer
 
     {
         ServiceInstaller serviceInstaller;
