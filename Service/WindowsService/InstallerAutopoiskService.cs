@@ -24,6 +24,7 @@ namespace WindowsService
             processInstaller.Account = ServiceAccount.LocalSystem;
             serviceInstaller.ServiceName = "AutopoiskService";
             Installers.Add(processInstaller);
+
             Installers.Add(serviceInstaller);
         }
     }
