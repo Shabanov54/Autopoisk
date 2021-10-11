@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libs\ServiceLib\ServiceLib.csproj" />
     <ProjectReference Include="..\..\Libs\Support\Support.csproj" />
     <ProjectReference Include="..\..\Service\WindowsService\WindowsService.csproj" />
   </ItemGroup>
