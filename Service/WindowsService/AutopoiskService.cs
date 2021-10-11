@@ -19,8 +19,14 @@ namespace WindowsService
         public AutopoiskService()
         {
             InitializeComponent();
+            this.CanStop = true;
+            this.CanPauseAndContinue = true;
+            this.AutoLog = true;
         }
-
+        public void onDebug()
+        {
+            OnStart(null);
+        }
         protected override void OnStart(string[] args)
         {
             server = new ServerService();

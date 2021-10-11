@@ -14,6 +14,18 @@ namespace WindowsService
         /// </summary>
         static void Main()
         {
+
+#if DEBUG
+            //While debugging this section is used.
+            AutopoiskService autopoiskService = new AutopoiskService();
+            autopoiskService.onDebug();
+            System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);
+        }
+    }
+}
+
+
+#else
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
@@ -23,3 +35,5 @@ namespace WindowsService
         }
     }
 }
+#endif
+
