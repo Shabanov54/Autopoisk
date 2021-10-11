@@ -11,39 +11,39 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+
 namespace WindowsService
 {
     public partial class AutopoiskService : ServiceBase
     {
-        ServerService server;
+        //ServerService server;
         public AutopoiskService()
         {
             InitializeComponent();
-            StartService();
+            //StartService();
         }
 
-        public void StartService()
-        {
-            ServiceController service = new ServiceController();
-            service.ServiceName = "AutopoiskService";
-            service.MachineName = "lockal";
-            service.Start();
-        }
-
-        //public void onDebug()
+        //public void StartService()
         //{
-        //    OnStart(null);
+        //    ServiceController service = new ServiceController();
+        //    service.ServiceName = "AutopoiskService";
+        //    service.MachineName = "lockal";
+        //    service.Start();
         //}
+
         protected override void OnStart(string[] args)
         {
-            server = new ServerService();
-            Thread serverService = new Thread(new ThreadStart(server.Start));
-            serverService.Start();
+            Log.Instance.Info("Started", "Служба");
+            //server = new ServerService();
+            //Thread serverService = new Thread(new ThreadStart(server.Start));
+            //serverService.Start();
         }
 
         protected override void OnStop()
         {
-            server.Stop();
+            Log.Instance.Info("Stop", "Служба");
+
+            //server.Stop();
         }
         class ServerService
         {
@@ -61,6 +61,7 @@ namespace WindowsService
             {
 
             }
+
         }
     }
 }
