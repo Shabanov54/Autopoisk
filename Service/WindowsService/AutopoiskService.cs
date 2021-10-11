@@ -26,6 +26,7 @@ namespace WindowsService
         {
             ServiceController service = new ServiceController();
             service.ServiceName = "AutopoiskService";
+
             service.Start();
         }
 
