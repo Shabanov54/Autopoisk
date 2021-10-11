@@ -20,9 +20,11 @@ namespace WindowsService
             InitializeComponent();
             serviceInstaller = new ServiceInstaller();
             processInstaller = new ServiceProcessInstaller();
+
             serviceInstaller.StartType = ServiceStartMode.Manual;
             processInstaller.Account = ServiceAccount.LocalSystem;
             serviceInstaller.ServiceName = "AutopoiskService";
+            serviceInstaller.DisplayName = "AutopoiskService";
             Installers.Add(processInstaller);
 
             Installers.Add(serviceInstaller);
