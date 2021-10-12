@@ -46,6 +46,8 @@ namespace WindowsService
                 var serverBinding = new NetTcpBinding();
                 host.AddServiceEndpoint(typeof(ServiceLib.IServiceLib), serverBinding, "");
                 host.Open();
+                Log.Instance.Info("Серверная часть в работе", "Служба");
+
             }
 
         }
