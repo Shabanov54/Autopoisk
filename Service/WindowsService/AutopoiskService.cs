@@ -50,25 +50,5 @@ namespace WindowsService
                 Log.Instance.Info("Серверная часть в работе", "Служба");
             }
         }
-        public  class Message
-        {
-            private string time;
-            private EndpointAddress _address;
-            public Message(string timeTomessage, EndpointAddress address)
-            {
-                this.time = timeTomessage;
-                this._address = address;
-            }
-            public string CreateMessage()
-            {
-
-                NetTcpBinding clientBinding = new NetTcpBinding();
-                ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, _address);
-                var service = factory.CreateChannel();
-                string massage = service.TimerDownloads(time);
-                return massage;
-            }
-
-        }
     }
 }

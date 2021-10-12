@@ -8,5 +8,7 @@ namespace ServiceLib
     {
         [OperationContract]
         string TimerDownloads(string timer);
+        [OperationContract]
+        string GetData(MessageLib.Message message);
     }
 }

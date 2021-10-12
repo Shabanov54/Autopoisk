@@ -43,13 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientService.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Service\WindowsService\WindowsService.csproj">
       <Project>{7d78f953-766c-4569-a59a-9f29754d3756}</Project>
       <Name>WindowsService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CreateMessageFromService\Message\MessageLib.csproj">
+      <Project>{7f583491-d2d8-4d6c-a286-1774dad4cb48}</Project>
+      <Name>MessageLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Logger\Log\Log.csproj">
       <Project>{03f6ceef-1986-43ea-b433-1382368f24d6}</Project>

@@ -10,5 +10,10 @@ namespace ServiceLib
 
             return outputMessage = "Время потраченное на загрузку страницы : " + timer; ;
         }
+        public string GetData(MessageLib.Message message)
+        {
+            string getDatamessage;
+            return getDatamessage = $"{message.name} \n {message.proxy}";
+        }
     }
 }
