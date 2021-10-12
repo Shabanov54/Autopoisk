@@ -21,7 +21,7 @@ namespace ClientService
 
             //string massage = service.TimerDownloads(timeTomessage);
             Log.Instance.Info("Возвращаем строковое значение ", "Клиент");
-            string massage =AutopoiskService.ServerService.CreateMessage(timeTomessage, factory);
+            string massage = AutopoiskService.ServerService.CreateMessage(timeTomessage, factory);
 
             return massage;
         }
