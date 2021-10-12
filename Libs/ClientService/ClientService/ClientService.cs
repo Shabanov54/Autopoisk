@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ServiceModel;
-using WindowsService;
 
 namespace ClientService
 {
@@ -19,9 +18,9 @@ namespace ClientService
             Log.Instance.Info("Запуск клиентской части приложения", "Клиент");
             Log.Instance.Info("Передаем строковое значение в клиентскую часть, для обработки", "Клиент");
 
-            //string massage = service.TimerDownloads(timeTomessage);
+            string massage = service.TimerDownloads(timeTomessage);
             Log.Instance.Info("Возвращаем строковое значение ", "Клиент");
-            string massage = AutopoiskService.ServerService.CreateMessage(timeTomessage, factory);
+            //string massage = AutopoiskService.ServerService.CreateMessage(timeTomessage, clientBinding, address);
 
             return massage;
         }
