@@ -51,13 +51,15 @@ namespace WindowsService
                 Log.Instance.Info("Серверная часть в работе", "Служба");
             }
 
-            //public static string CreateMessage(string time, NetTcpBinding clientBinding, EndpointAddress address)
-            //{            
-            //    ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, address);
-            //    var service = factory.CreateChannel();
-            //    string massage =service.TimerDownloads(time);
-            //    return massage;
-            //}
+            public static string CreateMessage(string timeTomessage, EndpointAddress address)
+            {
+                NetTcpBinding clientBinding = new NetTcpBinding();
+                ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, address);
+                var service = factory.CreateChannel();
+                string massage = service.TimerDownloads(timeTomessage);
+                return massage;
+            }
+
         }
     }
 }
