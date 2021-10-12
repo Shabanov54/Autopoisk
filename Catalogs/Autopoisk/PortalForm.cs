@@ -29,8 +29,9 @@ namespace PortalMazda
             webBrowser.Navigate($"{_url}");
             this.BrowserPanel.Controls.Add(webBrowser);
             this.WindowState = FormWindowState.Maximized;
+            Log.Instance.Info("Запуск формы с WebBrowser", "Winform");
 
-            
+
         }
 
         private void webBrowserComleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -47,8 +48,12 @@ namespace PortalMazda
                 timeEnd = DateTime.Now;
                 time = timeEnd.Subtract(timeStart);
                 timeTomessage = $"{time.Seconds} : {time.Milliseconds}";
+                Log.Instance.Info("Собрал необходимые данные для отправки в клиентскую службу", "Winform");
                 string messageBox = ClienService.ClientServiceRun(timeTomessage);
+                Log.Instance.Info("Прием значение от сервера", "Winform");
                 MessageBox.Show($"{messageBox}");
+                Log.Instance.Info("Вывод строкового значения в всплывающее окно", "Winform");
+
             }
         }
     }

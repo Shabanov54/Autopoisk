@@ -19,9 +19,13 @@ namespace PortalMazda
             NetTcpBinding clientBinding = new NetTcpBinding();
             ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, address);
             var service = factory.CreateChannel();
-
+            Log.Instance.Info("Запуск клиентской части приложения", "Клиент");
+            Log.Instance.Info("Передаем строковое значение в клиентскую часть, для обработки", "Клиент");
             string massage = service.TimerDownloads(timeTomessage);
+            Log.Instance.Info("Возвращаем строковое значение ", "Клиент");
+
             return massage;
+
         }
 
     }
