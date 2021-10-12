@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PortalMazda
+namespace ClientService
 {
-    class ClienService
+    public static class ClientService
     {
-        public string ClientServiceRun(string timeTomessage)
+        public static string ClientServiceRun(string timeTomessage)
         {
             var serviceAddress = "127.0.0.1:10000";
             var serviceName = "AutopoiskService";

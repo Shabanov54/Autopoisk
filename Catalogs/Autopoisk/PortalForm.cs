@@ -18,7 +18,7 @@ namespace PortalMazda
         DateTime timeStart;
         TimeSpan time;
         string timeTomessage;
-        ClienService ClienService = new ClienService();
+        //ClienService ClienService = new ClienService();
         public WindowForm()
         {
             InitializeComponent();
@@ -47,12 +47,13 @@ namespace PortalMazda
                 time = timeEnd.Subtract(timeStart);
                 timeTomessage = $"{time.Seconds} сек : {time.Milliseconds} мсек";
                 Log.Instance.Info("Собрал необходимые данные для отправки в клиентское приложение", "Winform");
-                string messageBox = ClienService.ClientServiceRun(timeTomessage);
+                string messageBox = ClientService.ClientService.ClientServiceRun(timeTomessage);
                 Log.Instance.Info("Получение строкового значения от сервера", "Winform");
                 MessageBox.Show($"{messageBox}");
                 Log.Instance.Info("Вывод строкового значения в всплывающее окно", "Winform");
 
             }
         }
+
     }
 }

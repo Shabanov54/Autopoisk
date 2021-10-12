@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLib", "..\..\Libs\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log", "..\..\Libs\Logger\Log\Log.csproj", "{03F6CEEF-1986-43EA-B433-1382368F24D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientService", "..\..\Libs\ClientService\ClientService\ClientService.csproj", "{70A7D679-689D-4794-B819-2021080E22C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{03F6CEEF-1986-43EA-B433-1382368F24D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03F6CEEF-1986-43EA-B433-1382368F24D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03F6CEEF-1986-43EA-B433-1382368F24D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70A7D679-689D-4794-B819-2021080E22C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A7D679-689D-4794-B819-2021080E22C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A7D679-689D-4794-B819-2021080E22C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A7D679-689D-4794-B819-2021080E22C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{7D78F953-766C-4569-A59A-9F29754D3756} = {DFE9F233-7C73-47FF-B4C1-399D4F4A3E20}
 		{6DE5DA4D-D02D-4697-AC08-DE5CEB0189B1} = {7A0C0BD1-06F8-4837-A961-C2D0FEA5C6ED}
 		{03F6CEEF-1986-43EA-B433-1382368F24D6} = {7A0C0BD1-06F8-4837-A961-C2D0FEA5C6ED}
+		{70A7D679-689D-4794-B819-2021080E22C2} = {7A0C0BD1-06F8-4837-A961-C2D0FEA5C6ED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14BEC549-B184-4570-9EE9-05A016A404C8}
