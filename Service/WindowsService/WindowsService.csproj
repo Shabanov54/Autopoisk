@@ -66,6 +66,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\Libs\Logger\Log\Log.csproj">
       <Project>{03f6ceef-1986-43ea-b433-1382368f24d6}</Project>
       <Name>Log</Name>
@@ -74,11 +79,6 @@
       <Project>{6de5da4d-d02d-4697-ac08-de5ceb0189b1}</Project>
       <Name>ServiceLib</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ProjectInstaller.resx">
-      <DependentUpon>ProjectInstaller.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
