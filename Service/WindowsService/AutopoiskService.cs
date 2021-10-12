@@ -16,7 +16,7 @@ namespace WindowsService
 {
     public partial class AutopoiskService : ServiceBase
     {
-        //ServerService server;
+        ServerService server;
         public AutopoiskService()
         {
             InitializeComponent();
@@ -25,16 +25,15 @@ namespace WindowsService
         protected override void OnStart(string[] args)
         {
             Log.Instance.Info("Started", "Служба");
-            //server = new ServerService();
-            //Thread serverService = new Thread(new ThreadStart(server.Start));
-            //serverService.Start();
+            server = new ServerService();
+            Thread serverService = new Thread(new ThreadStart(server.Start));
+            serverService.Start();
         }
 
         protected override void OnStop()
         {
             Log.Instance.Info("Stop", "Служба");
 
-            //server.Stop();
         }
         class ServerService
         {
@@ -47,10 +46,6 @@ namespace WindowsService
                 var serverBinding = new NetTcpBinding();
                 host.AddServiceEndpoint(typeof(ServiceLib.IServiceLib), serverBinding, "");
                 host.Open();
-            }
-            public void Stop()
-            {
-
             }
 
         }
