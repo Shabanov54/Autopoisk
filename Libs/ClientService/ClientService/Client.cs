@@ -20,9 +20,7 @@ namespace ClientService
             //string massageOut = service.TimerDownloads(timeTomessage);
 
             MessageLib.Message message = new MessageLib.Message();
-            message.proxy = serviceAddress;
-            message.name = serviceName;
-            string massageOut =service.GetData(message);
+            string massageOut = service.GetData(message);
 
             Log.Instance.Info("Возвращаем строковое значение ", "Клиент");
             return massageOut;

@@ -48,6 +48,10 @@ namespace WindowsService
                 host.AddServiceEndpoint(typeof(ServiceLib.IServiceLib), serverBinding, "");
                 host.Open();
                 Log.Instance.Info("Серверная часть в работе", "Служба");
+
+                MessageLib.Message message = new MessageLib.Message();
+                message.name = serviceName;
+                message.proxy = serviceAddress;
             }
         }
     }

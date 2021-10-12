@@ -12,8 +12,8 @@ namespace ServiceLib
         }
         public string GetData(MessageLib.Message message)
         {
-            string getDatamessage;
-            return getDatamessage = $"{message.name} \n {message.proxy}";
+            string messageFromService;
+            return messageFromService = $"{message.proxy} \n{message.name}";
         }
     }
 }
