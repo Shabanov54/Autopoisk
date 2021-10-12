@@ -28,6 +28,8 @@ namespace WindowsService
             server = new ServerService();
             Thread serverService = new Thread(new ThreadStart(server.Start));
             serverService.Start();
+
+
         }
 
         protected override void OnStop()
@@ -35,7 +37,7 @@ namespace WindowsService
             Log.Instance.Info("Stop", "Служба");
 
         }
-        class ServerService
+        public class ServerService
         {
             public void Start()
             {
@@ -47,9 +49,14 @@ namespace WindowsService
                 host.AddServiceEndpoint(typeof(ServiceLib.IServiceLib), serverBinding, "");
                 host.Open();
                 Log.Instance.Info("Серверная часть в работе", "Служба");
-
             }
 
+            public static string CreateMessage(string time, ChannelFactory<ServiceLib.IServiceLib> factory)
+            {
+                var service = factory.CreateChannel();
+                string massage =service.TimerDownloads(time);
+                return massage;
+            }
         }
     }
 }

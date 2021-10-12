@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Service\WindowsService\WindowsService.csproj" />
     <ProjectReference Include="..\..\Logger\Log\Log.csproj" />
     <ProjectReference Include="..\..\ServiceLib\ServiceLib.csproj" />
   </ItemGroup>
