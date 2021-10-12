@@ -14,14 +14,15 @@ namespace ClientService
             EndpointAddress address = new EndpointAddress(tcpUri);
             NetTcpBinding clientBinding = new NetTcpBinding();
             ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, address);
-            var service = factory.CreateChannel();
+            //var service = factory.CreateChannel();
             Log.Instance.Info("Запуск клиентской части приложения", "Клиент");
             Log.Instance.Info("Передаем строковое значение в клиентскую часть, для обработки", "Клиент");
             
-            string massage = service.TimerDownloads(timeTomessage);
+            //string massage = service.TimerDownloads(timeTomessage);
             Log.Instance.Info("Возвращаем строковое значение ", "Клиент");
+            WindowsService.AutopoiskService.Message message = new WindowsService.AutopoiskService.Message(timeTomessage, address);
 
-
+            string massage = message.CreateMessage() ;
             return massage;
         }
 

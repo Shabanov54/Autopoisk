@@ -28,8 +28,6 @@ namespace WindowsService
             server = new ServerService();
             Thread serverService = new Thread(new ThreadStart(server.Start));
             serverService.Start();
-
-
         }
 
         protected override void OnStop()
@@ -39,6 +37,7 @@ namespace WindowsService
         }
         public class ServerService
         {
+
             public void Start()
             {
                 var serviceAddress = "127.0.0.1:10000";
@@ -50,6 +49,26 @@ namespace WindowsService
                 host.Open();
                 Log.Instance.Info("Серверная часть в работе", "Служба");
             }
+        }
+        public  class Message
+        {
+            private string time;
+            private EndpointAddress _address;
+            public Message(string timeTomessage, EndpointAddress address)
+            {
+                this.time = timeTomessage;
+                this._address = address;
+            }
+            public string CreateMessage()
+            {
+
+                NetTcpBinding clientBinding = new NetTcpBinding();
+                ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, _address);
+                var service = factory.CreateChannel();
+                string massage = service.TimerDownloads(time);
+                return massage;
+            }
+
         }
     }
 }
