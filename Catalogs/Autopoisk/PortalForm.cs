@@ -48,9 +48,9 @@ namespace PortalMazda
                 timeEnd = DateTime.Now;
                 time = timeEnd.Subtract(timeStart);
                 timeTomessage = $"{time.Seconds} сек : {time.Milliseconds} мсек";
-                Log.Instance.Info("Собрал необходимые данные для отправки в клиентскую службу", "Winform");
+                Log.Instance.Info("Собрал необходимые данные для отправки в клиентское приложение", "Winform");
                 string messageBox = ClienService.ClientServiceRun(timeTomessage);
-                Log.Instance.Info("Прием значение от сервера", "Winform");
+                Log.Instance.Info("Получение строкового значения от сервера", "Winform");
                 MessageBox.Show($"{messageBox}");
                 Log.Instance.Info("Вывод строкового значения в всплывающее окно", "Winform");
 
