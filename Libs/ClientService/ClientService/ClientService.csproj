@@ -46,13 +46,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Service\WindowsService\WindowsService.csproj">
-      <Project>{7d78f953-766c-4569-a59a-9f29754d3756}</Project>
-      <Name>WindowsService</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Logger\Log\Log.csproj">
       <Project>{03f6ceef-1986-43ea-b433-1382368f24d6}</Project>
       <Name>Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceLib\ServiceLib.csproj">
+      <Project>{6de5da4d-d02d-4697-ac08-de5ceb0189b1}</Project>
+      <Name>ServiceLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

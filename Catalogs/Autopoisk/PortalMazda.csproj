@@ -12,8 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Libs\ClientService\ClientService\ClientService.csproj" />
+    <ProjectReference Include="..\..\Libs\Logger\Log\Log.csproj" />
     <ProjectReference Include="..\..\Libs\Support\Support.csproj" />
-    <ProjectReference Include="..\..\Service\WindowsService\WindowsService.csproj" />
   </ItemGroup>
 
   <ItemGroup>
