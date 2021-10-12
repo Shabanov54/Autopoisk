@@ -30,8 +30,7 @@ namespace PortalMazda
             this.BrowserPanel.Controls.Add(webBrowser);
             this.WindowState = FormWindowState.Maximized;
             Log.Instance.Info("Запуск формы с WebBrowser", "Winform");
-
-
+            timeStart = DateTime.Now;
         }
 
         private void webBrowserComleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -40,7 +39,6 @@ namespace PortalMazda
             if (webBrowser.ReadyState == WebBrowserReadyState.Uninitialized || webBrowser.ReadyState == WebBrowserReadyState.Loading || webBrowser.ReadyState == WebBrowserReadyState.Loaded)
             {
                 downloadGIF.Visible = true;
-                timeStart = DateTime.Now;
             }
             if (webBrowser.ReadyState == WebBrowserReadyState.Complete)
             {
