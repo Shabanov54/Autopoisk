@@ -12,8 +12,8 @@ namespace ClientService
 
             Uri tcpUri = new Uri($"net.tcp://{serviceAddress}/{serviceName}");
             EndpointAddress address = new EndpointAddress(tcpUri);
-            NetTcpBinding clientBinding = new NetTcpBinding();
-            ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, address);
+           // NetTcpBinding clientBinding = new NetTcpBinding();
+            //ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, address);
             //var service = factory.CreateChannel();
             Log.Instance.Info("Запуск клиентской части приложения", "Клиент");
             Log.Instance.Info("Передаем строковое значение в клиентскую часть, для обработки", "Клиент");
