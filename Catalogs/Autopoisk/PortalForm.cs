@@ -47,7 +47,7 @@ namespace PortalMazda
                 downloadGIF.Visible = false;
                 timeEnd = DateTime.Now;
                 time = timeEnd.Subtract(timeStart);
-                timeTomessage = $"{time.Seconds} : {time.Milliseconds}";
+                timeTomessage = $"{time.Seconds} сек : {time.Milliseconds} мсек";
                 Log.Instance.Info("Собрал необходимые данные для отправки в клиентскую службу", "Winform");
                 string messageBox = ClienService.ClientServiceRun(timeTomessage);
                 Log.Instance.Info("Прием значение от сервера", "Winform");
