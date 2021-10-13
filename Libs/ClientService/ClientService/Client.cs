@@ -19,10 +19,6 @@ namespace ClientService
             Log.Instance.Info("Передаем строковое значение в клиентскую часть, для обработки", "Клиент");
             string massageOut = service.TimerDownloads(timeTomessage);
 
-            //MessageLib.Message message = new MessageLib.Message();
-            //message = service.GetData(message);
-
-
             Log.Instance.Info("Возвращаем строковое значение ", "Клиент");
             return massageOut;
         }
