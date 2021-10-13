@@ -34,7 +34,7 @@ namespace ClientService
             var service = factory.CreateChannel();
 
             MessageLib.Message message = new MessageLib.Message();
-            message = service.GetData(message);
+            service.GetData(ref message);
 
             string messageGetData = $"{message.name}\n{message.proxy}";
 
