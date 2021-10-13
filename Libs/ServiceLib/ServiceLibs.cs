@@ -16,10 +16,6 @@ namespace ServiceLib
         {
             message.proxy = "127.0.0.1:10000";
             message.name = "AutopoiskService";
-
-
-
-            //OperationContext.Current.GetCallbackChannel<IServiceLib>().GetData(message);
         }
     }
 }
