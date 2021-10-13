@@ -47,13 +47,13 @@ namespace PortalMazda
                 time = timeEnd.Subtract(timeStart);
                 timeTomessage = $"{time.Seconds} сек : {time.Milliseconds} мсек";
                 Log.Instance.Info("Собрал необходимые данные для отправки в клиентское приложение", "Winform");
-                //string messageBox = ClientService.ClientService.ClientServiceRun(timeTomessage);
-                string messageBox = ClientService.Client.Run(timeTomessage);
+                string messageBox = ClientService.Client.RunClient(timeTomessage);
+                Log.Instance.Info("Получение строкового значения от сервера1", "Winform");
+                string messagebogGetData = ClientService.Client.RunGetData();
+                Log.Instance.Info("Получение строкового значения от сервера2", "Winform");
+                MessageBox.Show($"{messagebogGetData}");
 
-                Log.Instance.Info("Получение строкового значения от сервера", "Winform");
-                MessageBox.Show($"{messageBox}");
                 ServiceLib.ServiceLib serviceLib = new ServiceLib.ServiceLib();
-                MessageBox.Show("");
                 Log.Instance.Info("Вывод строкового значения в всплывающее окно", "Winform");
 
             }
