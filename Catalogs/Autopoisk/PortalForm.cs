@@ -56,7 +56,6 @@ namespace PortalMazda
                 Log.Instance.Info("Получение строкового значения от сервера2", "Winform");
                 MessageBox.Show(messagebogGetData);
 
-                ServiceLib.ServiceLib serviceLib = new ServiceLib.ServiceLib();
                 Log.Instance.Info("Вывод строкового значения в всплывающее окно", "Winform");
 
             }
