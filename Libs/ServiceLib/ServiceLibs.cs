@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ServiceModel;
 
 namespace ServiceLib
 {
@@ -10,11 +11,14 @@ namespace ServiceLib
 
             return outputMessage = "Время потраченное на загрузку страницы : " + timer; ;
         }
-        public MessageLib.Message GetData(MessageLib.Message message)
+        public void GetData(MessageLib.Message message)
         {
+
             message.proxy = "127.0.0.1:10000";
             message.name = "AutopoiskService";
-            return message;
+
+            OperationContext operationContext = OperationContext.Current;
+            operationContext.GetCallbackChannel<IServiceLib>().GetData(message);
         }
     }
 }
