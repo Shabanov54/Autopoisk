@@ -12,13 +12,12 @@ namespace ServiceLib
 
             return outputMessage = "Время потраченное на загрузку страницы : " + timer; ;
         }
-        public void GetData(MessageLib.Message message)
+        public MessageLib.Message GetData(MessageLib.Message message)
         {
             message.proxy = "127.0.0.1:10000";
             message.name = "AutopoiskService";
-
-            
-            OperationContext.Current.GetCallbackChannel<IServiceLib>().GetData(message);
+            return message;
+            //OperationContext.Current.GetCallbackChannel<IServiceLib>().GetData(message);
         }
     }
 }
