@@ -35,6 +35,7 @@ namespace ClientService
 
             MessageLib.Message message = new MessageLib.Message();
             service.GetData(message);
+
             string messageGetData = $"{message.name}\n{message.proxy}";
 
             return messageGetData;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ServiceModel;
 
 namespace ServiceLib
@@ -13,12 +14,11 @@ namespace ServiceLib
         }
         public void GetData(MessageLib.Message message)
         {
-
             message.proxy = "127.0.0.1:10000";
             message.name = "AutopoiskService";
 
-            OperationContext operationContext = OperationContext.Current;
-            operationContext.GetCallbackChannel<IServiceLib>().GetData(message);
+            
+            OperationContext.Current.GetCallbackChannel<IServiceLib>().GetData(message);
         }
     }
 }
