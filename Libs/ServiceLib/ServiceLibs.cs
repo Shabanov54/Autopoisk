@@ -21,17 +21,35 @@ namespace ServiceLib
         }
         public void GetDataDB(ref MessageDB messageDB)
         {
-            using (var command = new NpgsqlCommand("SELECT * FROM autopoisktable"))
-            {
-                var reader = command.ExecuteReader();
+            string Host = "192.168.1.237";
+            string User = "postgres";
+            string DBname = "AutopoiskDB";
+            string Password = "!QAZxsw2";
+            string Port = "5432";
 
-                if (reader.Read())
+            string connString = String.Format($"Server={Host};Username={User};Database={DBname};Port={Port};Password={Password};SSLMode=Prefer");
+
+            using (var conn = new NpgsqlConnection(connString))
+            {
+                Log.Instance.Info("Открытие соединения", "Служба");
+                conn.Open();
+                Log.Instance.Info("Соединение активно", "Служба");
+
+                using (var command = new NpgsqlCommand("SELECT * FROM autopoisktable", conn))
                 {
-                    messageDB.id = reader.GetInt64(0).ToString();
-                    messageDB.name = reader.GetString(1);
+                    var reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        messageDB.id = reader.GetInt64(0).ToString();
+                        messageDB.name = reader.GetString(1);
+                    }
                 }
+                conn.Close();
             }
+
         }
+
     }
 }
 

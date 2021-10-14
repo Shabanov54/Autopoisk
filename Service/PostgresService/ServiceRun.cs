@@ -17,11 +17,6 @@ namespace PostgresService
 {
     public partial class ServiceRun : ServiceBase
     {
-        private static string Host = "192.168.1.237";
-        private static string User = "postgres";
-        private static string DBname = "AutopoiskDB";
-        private static string Password = "!QAZxsw2";
-        private static string Port = "5432";
 
         protected override void OnStart(string[] args)
         {
@@ -29,12 +24,7 @@ namespace PostgresService
             Log.Instance.Info("Старт серверной части", "Служба");
 
             Thread startService = new Thread(new ThreadStart(service.Start));
-            Log.Instance.Info("Старт подключения к БД", "Служба");
-
-            Thread connectToDB = new Thread(new ThreadStart(service.RunConn));
-
             service.Start();
-            service.RunConn();
         }
 
         protected override void OnStop()
@@ -56,15 +46,15 @@ namespace PostgresService
                 Log.Instance.Info("Серверная часть в работе", "Служба");
 
             }
-            public void RunConn()
-            {
-                string connString = String.Format($"Server={Host};Username={User};Database={DBname};Port={Port};Password={Password};SSLMode=Prefer");
-                var conn = new NpgsqlConnection(connString);
-                Log.Instance.Info("Открытие соединения", "Служба");
-                conn.Open();
-                Log.Instance.Info("Соединение активно", "Служба");
+            //public void RunConn()
+            //{
+            //    string connString = String.Format($"Server={Host};Username={User};Database={DBname};Port={Port};Password={Password};SSLMode=Prefer");
+            //    conn = new NpgsqlConnection(connString);
+            //    Log.Instance.Info("Открытие соединения", "Служба");
+            //    conn.Open();
+            //    Log.Instance.Info("Соединение активно", "Служба");
 
-            }
+            //}
         }
     }
 }
