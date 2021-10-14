@@ -51,7 +51,6 @@ namespace PostgresCreateConnService
                 var conn = new NpgsqlConnection(connString);
                 Log.Instance.Info("Открытие соединения", "Служба");
                 conn.Open();
-
             }
         }
     }

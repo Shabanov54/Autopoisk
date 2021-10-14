@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ServiceModel;
+using MessageLib;
 
 namespace ServiceLib
 {
@@ -17,7 +18,7 @@ namespace ServiceLib
             message.proxy = "127.0.0.1:10000";
             message.name = "AutopoiskService";
         }
-        public void GetDataDB()
+        public void GetDataDB(MessageDB messageDB)
         {
 
         }

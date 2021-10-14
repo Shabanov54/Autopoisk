@@ -41,11 +41,18 @@ namespace ClientService
 
             return messageGetData;
         }
-        //public static string RunGetDataPostreg()
-        //{
-        //    MessageDB messageDB = new MessageDB();
-            
-        //}
+        public static string RunGetDataPostreg()
+        {
+            MessageDB messageDB = new MessageDB();
+
+            NetTcpBinding clientBinding = new NetTcpBinding();
+            ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding);
+            var service = factory.CreateChannel();
+
+            service.GetDataDB(messageDB);
+            string messageDBstring = $"{messageDB.id} - {messageDB.name}";
+            return messageDBstring;
+        }
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ServiceModel;
+using MessageLib;
 
 namespace ServiceLib
 {
@@ -11,8 +12,9 @@ namespace ServiceLib
 
         [OperationContract]
        void GetData(ref MessageLib.Message message);
+
         [OperationContract]
-        void GetDataDB();
+        void GetDataDB(MessageDB messageDB);
 
     }
 
