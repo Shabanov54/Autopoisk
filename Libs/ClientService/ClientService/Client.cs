@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ServiceModel;
+using MessageLib;
 
 namespace ClientService
 {
@@ -33,13 +34,18 @@ namespace ClientService
             ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding, address);
             var service = factory.CreateChannel();
 
-            MessageLib.Message message = new MessageLib.Message();
+            Message message = new Message();
             service.GetData(ref message);
 
             string messageGetData = $"{message.name}\n{message.proxy}";
 
             return messageGetData;
         }
+        //public static string RunGetDataPostreg()
+        //{
+        //    MessageDB messageDB = new MessageDB();
+            
+        //}
 
     }
 }

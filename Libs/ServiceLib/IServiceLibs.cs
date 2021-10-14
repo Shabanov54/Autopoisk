@@ -11,6 +11,9 @@ namespace ServiceLib
 
         [OperationContract]
        void GetData(ref MessageLib.Message message);
+        [OperationContract]
+        void GetDataDB();
+
     }
 
 }
