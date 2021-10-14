@@ -50,6 +50,7 @@ namespace PostgresCreateConnService
                 {
                     Log.Instance.Info("Открытие соединения", "Служба");
                     conn.Open();
+
                 }    
             }
         }
