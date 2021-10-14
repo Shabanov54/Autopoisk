@@ -48,11 +48,9 @@ namespace PostgresCreateConnService
             DBname,
             Port,
             Password);
-                using (var conn = new NpgsqlConnection(connString))
-                {
-                    Log.Instance.Info("Открытие соединения", "Служба");
-                    conn.Open();
-                }
+                var conn = new NpgsqlConnection(connString);
+                Log.Instance.Info("Открытие соединения", "Служба");
+                conn.Open();
 
             }
         }
