@@ -19,7 +19,7 @@ namespace PostgresService
     {
         private static string Host = "192.168.1.237";
         private static string User = "postgres";
-        private static string DBname = "Autopoisk";
+        private static string DBname = "AutopoiskDB";
         private static string Password = "!QAZxsw2";
         private static string Port = "5432";
 
