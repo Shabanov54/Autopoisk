@@ -46,15 +46,6 @@ namespace PostgresService
                 Log.Instance.Info("Серверная часть в работе", "Служба");
 
             }
-            //public void RunConn()
-            //{
-            //    string connString = String.Format($"Server={Host};Username={User};Database={DBname};Port={Port};Password={Password};SSLMode=Prefer");
-            //    conn = new NpgsqlConnection(connString);
-            //    Log.Instance.Info("Открытие соединения", "Служба");
-            //    conn.Open();
-            //    Log.Instance.Info("Соединение активно", "Служба");
-
-            //}
         }
     }
 }
