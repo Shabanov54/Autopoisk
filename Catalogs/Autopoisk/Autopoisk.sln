@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientService", "..\..\Libs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageLib", "..\..\Libs\CreateMessageFromService\Message\MessageLib.csproj", "{7F583491-D2D8-4D6C-A286-1774DAD4CB48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgresCreateConnService", "..\..\Service\PostgresService\PostgresCreateConnService.csproj", "{A31A4AE3-39EE-46AC-9E08-FAF2457C9C6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgresService", "..\..\Service\PostgresService\PostgresService.csproj", "{A31A4AE3-39EE-46AC-9E08-FAF2457C9C6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgresServise", "..\..\Libs\PostgresServiceLib\PostgresServise.csproj", "{AC5F5C02-AE16-4151-A88A-F6918DD19216}"
 EndProject
