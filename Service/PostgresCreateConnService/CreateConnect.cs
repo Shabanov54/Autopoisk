@@ -13,10 +13,10 @@ namespace PostgresCreateConnService
 {
     public partial class CreateConnect : ServiceBase
     {
-        private static string Host = "mydemoserver.postgres.database.azure.com";
-        private static string User = "mylogin@mydemoserver";
-        private static string DBname = "mypgsqldb";
-        private static string Password = "<server_admin_password>";
+        private static string Host = "192.168.1.237";
+        private static string User = "postgres";
+        private static string DBname = "Autopoisk";
+        private static string Password = "!QAZxsw2";
         private static string Port = "5432";
         public CreateConnect()
         {
