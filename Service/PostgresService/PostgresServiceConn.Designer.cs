@@ -1,7 +1,7 @@
 ﻿
 namespace PostgresCreateConnService
 {
-    partial class CreateConnect
+    partial class PostgresServiceConn
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

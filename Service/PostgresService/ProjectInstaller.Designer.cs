@@ -40,7 +40,7 @@ namespace PostgresCreateConnService
             // 
             // serviceInstaller
             // 
-            this.serviceInstaller.ServiceName = "PostgresConnService";
+            this.serviceInstaller.ServiceName = "PostgresService";
             this.serviceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller

@@ -45,11 +45,17 @@ namespace ClientService
         {
             MessageDB messageDB = new MessageDB();
 
+            var serviceAddress = "127.0.0.1:5000";
+            var serviceName = "PostgresService";
+
+            Uri tcpUri = new Uri($"net.tcp://{serviceAddress}/{serviceName}");
+            EndpointAddress address = new EndpointAddress(tcpUri);
+
             NetTcpBinding clientBinding = new NetTcpBinding();
-            ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding);
+            ChannelFactory<ServiceLib.IServiceLib> factory = new ChannelFactory<ServiceLib.IServiceLib>(clientBinding,address);
             var service = factory.CreateChannel();
 
-            service.GetDataDB(messageDB);
+            service.GetDataDB(ref messageDB);
             string messageDBstring = $"{messageDB.id} - {messageDB.name}";
             return messageDBstring;
         }

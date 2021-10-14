@@ -17,7 +17,7 @@ namespace PostgresCreateConnService
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new CreateConnect()
+                new PostgresServiceConn()
             };
             ServiceBase.Run(ServicesToRun);
         }

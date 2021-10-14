@@ -56,6 +56,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Catalogs\Autopoisk\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\Catalogs\Autopoisk\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
@@ -86,11 +87,11 @@
     <Compile Include="ProjectInstaller.Designer.cs">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateConnect.cs">
+    <Compile Include="PostgresServiceConn.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CreateConnect.Designer.cs">
-      <DependentUpon>CreateConnect.cs</DependentUpon>
+    <Compile Include="PostgresServiceConn.Designer.cs">
+      <DependentUpon>PostgresServiceConn.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +109,10 @@
     <ProjectReference Include="..\..\Libs\Logger\Log\Log.csproj">
       <Project>{03f6ceef-1986-43ea-b433-1382368f24d6}</Project>
       <Name>Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\ServiceLib\ServiceLib.csproj">
+      <Project>{6de5da4d-d02d-4697-ac08-de5ceb0189b1}</Project>
+      <Name>ServiceLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

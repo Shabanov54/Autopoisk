@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ServiceModel;
 using MessageLib;
+using Npgsql;
 
 namespace ServiceLib
 {
@@ -18,9 +19,19 @@ namespace ServiceLib
             message.proxy = "127.0.0.1:10000";
             message.name = "AutopoiskService";
         }
-        public void GetDataDB(MessageDB messageDB)
+        public void GetDataDB(ref MessageDB messageDB)
         {
+            using (var command = new NpgsqlCommand("SELECT * FROM autopoisktable"))
+            {
+                var reader = command.ExecuteReader();
 
+                if (reader.Read())
+                {
+                    messageDB.id = reader.GetInt64(0).ToString();
+                    messageDB.name = reader.GetString(1);
+                }
+            }
         }
     }
 }
+

@@ -14,7 +14,7 @@ namespace ServiceLib
        void GetData(ref MessageLib.Message message);
 
         [OperationContract]
-        void GetDataDB(MessageDB messageDB);
+        void GetDataDB(ref MessageDB messageDB);
 
     }
 
