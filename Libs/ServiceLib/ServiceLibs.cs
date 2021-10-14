@@ -31,14 +31,11 @@ namespace ServiceLib
 
             using (var conn = new NpgsqlConnection(connString))
             {
-                Log.Instance.Info("Открытие соединения", "Клиент");
                 conn.Open();
-                Log.Instance.Info("Соединение активно", "Клиент");
 
                 using (var command = new NpgsqlCommand("SELECT * FROM autopoisktable", conn))
                 {
                     var reader = command.ExecuteReader();
-                    Log.Instance.Info("Получение данных из БД через службу", "Клиент");
 
                     if (reader.Read())
                     {
@@ -47,7 +44,6 @@ namespace ServiceLib
                     }
                 }
                 conn.Close();
-                Log.Instance.Info("Соединение закрыто", "Клиент");
 
             }
 

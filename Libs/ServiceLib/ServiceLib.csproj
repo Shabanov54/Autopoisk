@@ -85,10 +85,6 @@
       <Project>{7f583491-d2d8-4d6c-a286-1774dad4cb48}</Project>
       <Name>MessageLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Logger\Log\Log.csproj">
-      <Project>{03f6ceef-1986-43ea-b433-1382368f24d6}</Project>
-      <Name>Log</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
