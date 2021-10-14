@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,7 @@ namespace PostgresCreateConnService
         {
             RunService service = new RunService();
             Thread connectToDB = new Thread(new ThreadStart(service.Start));
+            Log.Instance.Info("Started", "Служба");
             service.Start();
         }
 
@@ -38,7 +40,17 @@ namespace PostgresCreateConnService
         {
             public void Start()
             {
-
+                string connString = String.Format($"Server={0};Username={1};Database={2};Port={3};Password={4};SSLMode=Prefer",
+                    Host,
+                    User,
+                    DBname,
+                    Port,
+                    Password);
+                using (var conn = new NpgsqlConnection(connString))
+                {
+                    Log.Instance.Info("Открытие соединения", "Служба");
+                    conn.Open();
+                }    
             }
         }
     }
