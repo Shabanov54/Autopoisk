@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A31A4AE3-39EE-46AC-9E08-FAF2457C9C6E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PostgresCreateConnService</RootNamespace>
-    <AssemblyName>PostgresCreateConnService</AssemblyName>
+    <RootNamespace>PostgresService</RootNamespace>
+    <AssemblyName>PostgresService</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
