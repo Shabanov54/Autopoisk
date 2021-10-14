@@ -11,7 +11,7 @@ namespace ServiceLib
         string TimerDownloads(string timer);
 
         [OperationContract]
-       void GetData(ref MessageLib.Message message);
+       void GetData(ref Message message);
 
         [OperationContract]
         void GetDataDB(ref MessageDB messageDB);

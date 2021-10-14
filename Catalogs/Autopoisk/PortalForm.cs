@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClientService;
 
 namespace PortalMazda
 {
@@ -18,7 +19,6 @@ namespace PortalMazda
         DateTime timeStart;
         TimeSpan time;
         string timeTomessage;
-        //ClienService ClienService = new ClienService();
         public WindowForm()
         {
             InitializeComponent();
@@ -48,15 +48,15 @@ namespace PortalMazda
                 timeTomessage = $"{time.Seconds} сек : {time.Milliseconds} мсек";
                 Log.Instance.Info("Собрал необходимые данные для отправки в клиентское приложение", "Winform");
 
-                //string messageBox = ClientService.Client.RunClient(timeTomessage);
+                //string messageBox = Client.RunClient(timeTomessage);
                 //Log.Instance.Info("Получение строкового значения от сервера1", "Winform");
                 //MessageBox.Show(messageBox);
 
-                //string messagebogGetData = ClientService.Client.RunGetData();
+                //string messagebogGetData = Client.RunGetData();
                 //Log.Instance.Info("Получение строкового значения от сервера2", "Winform");
                 //MessageBox.Show(messagebogGetData);
 
-                string messageGetDataBD = ClientService.Client.RunGetDataPostreg();
+                string messageGetDataBD = Client.RunGetDataPostreg();
                 Log.Instance.Info("Получение строкового значения от сервера БД", "Winform");
                 MessageBox.Show(messageGetDataBD);
 
