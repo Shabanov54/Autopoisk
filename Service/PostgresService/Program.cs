@@ -17,7 +17,7 @@ namespace PostgresService
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new PostgresService()
+                new ServiceRun()
             };
             ServiceBase.Run(ServicesToRun);
         }

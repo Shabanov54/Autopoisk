@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{29572CFA-2EA6-409A-8E52-7DEAC415AC15}</ProjectGuid>
+    <ProjectGuid>{A31A4AE3-39EE-46AC-9E08-FAF2457C9C6E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PostgresService</RootNamespace>
     <AssemblyName>PostgresService</AssemblyName>
@@ -81,17 +81,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProjectInstaller.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="ProjectInstaller.cs" />
     <Compile Include="ProjectInstaller.Designer.cs">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="ServiceRun.cs">
+    <Compile Include="PostgresService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ServiceRun.Designer.cs">
-      <DependentUpon>ServiceRun.cs</DependentUpon>
+    <Compile Include="PostgresService.Designer.cs">
+      <DependentUpon>PostgresService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

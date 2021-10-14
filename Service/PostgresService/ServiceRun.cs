@@ -1,5 +1,4 @@
-﻿using Npgsql;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,23 +9,19 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Npgsql;
 using ServiceLib;
 
 
 namespace PostgresService
 {
-    public partial class PostgresService : ServiceBase
+    public partial class ServiceRun : ServiceBase
     {
         private static string Host = "192.168.1.237";
         private static string User = "postgres";
         private static string DBname = "Autopoisk";
         private static string Password = "!QAZxsw2";
         private static string Port = "5432";
-        public PostgresService()
-        {
-
-            InitializeComponent();
-        }
 
         protected override void OnStart(string[] args)
         {

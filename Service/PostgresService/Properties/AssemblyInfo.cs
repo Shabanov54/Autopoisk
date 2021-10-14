@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // общие сведения об этой сборке.
-[assembly: AssemblyTitle("PostgresCreateConnService")]
+[assembly: AssemblyTitle("PostgresService")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PostgresCreateConnService")]
+[assembly: AssemblyProduct("PostgresService")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Указанный ниже идентификатор GUID предназначен для идентификации библиотеки типов, если этот проект будет видимым для COM-объектов
-[assembly: Guid("a31a4ae3-39ee-46ac-9e08-faf2457c9c6e")]
+[assembly: Guid("29572cfa-2ea6-409a-8e52-7deac415ac15")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

@@ -1,7 +1,7 @@
 ﻿
 namespace PostgresService
 {
-    partial class PostgresService
+    partial class ServiceRun
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -30,7 +30,7 @@ namespace PostgresService
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "PostgresService";
+            this.ServiceName = "Service1";
         }
 
         #endregion
