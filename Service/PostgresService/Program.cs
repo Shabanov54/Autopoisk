@@ -5,7 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostgresCreateConnService
+namespace PostgresService
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace PostgresCreateConnService
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new PostgresServiceConn()
+                new PostgresService()
             };
             ServiceBase.Run(ServicesToRun);
         }

@@ -87,11 +87,11 @@
     <Compile Include="ProjectInstaller.Designer.cs">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="PostgresServiceConn.cs">
+    <Compile Include="PostgresService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PostgresServiceConn.Designer.cs">
-      <DependentUpon>PostgresServiceConn.cs</DependentUpon>
+    <Compile Include="PostgresService.Designer.cs">
+      <DependentUpon>PostgresService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

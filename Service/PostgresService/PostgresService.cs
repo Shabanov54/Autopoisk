@@ -13,16 +13,16 @@ using System.Threading.Tasks;
 using ServiceLib;
 
 
-namespace PostgresCreateConnService
+namespace PostgresService
 {
-    public partial class PostgresServiceConn : ServiceBase
+    public partial class PostgresService : ServiceBase
     {
         private static string Host = "192.168.1.237";
         private static string User = "postgres";
         private static string DBname = "Autopoisk";
         private static string Password = "!QAZxsw2";
         private static string Port = "5432";
-        public PostgresServiceConn()
+        public PostgresService()
         {
 
             InitializeComponent();

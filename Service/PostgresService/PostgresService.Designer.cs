@@ -1,7 +1,7 @@
 ﻿
-namespace PostgresCreateConnService
+namespace PostgresService
 {
-    partial class PostgresServiceConn
+    partial class PostgresService
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -30,7 +30,7 @@ namespace PostgresCreateConnService
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "Service1";
+            this.ServiceName = "PostgresService";
         }
 
         #endregion
