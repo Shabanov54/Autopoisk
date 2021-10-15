@@ -1,4 +1,7 @@
 ﻿using System;
+using UserDB;
+using AppContext;
+using System.Linq;
 
 namespace AutopoiskEFCore
 {
@@ -6,7 +9,15 @@ namespace AutopoiskEFCore
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (var db = new Context())
+            {
+                var users = db.users.ToList();
+                Console.WriteLine("Получение обектов из бд");
+                foreach (var user in users)
+                {
+                    Console.WriteLine($"{user.id}  -  {user.name}");
+                }
+            }
         }
     }
 }

@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
@@ -11,8 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Libs\AppContext\AppContext.csproj" />
-    <ProjectReference Include="..\..\Libs\UserDB\UserDB.csproj" />
+    <ProjectReference Include="..\UserDB\UserDB.csproj" />
   </ItemGroup>
 
 </Project>
