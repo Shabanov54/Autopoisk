@@ -8,16 +8,14 @@ namespace AutopoiskEFCore
     {
         static void Main(string[] args)
         {
+            User user = new User();
             using (var db = new Context())
             {
                 if (db.Database.CanConnect())
                 {
-                    var users = db.users.ToList();
+                    var users = db.users;
                     Console.WriteLine("Получение обектов из бд");
-                    foreach (var user in users)
-                    {
-                        Console.WriteLine($"{user.id}  -  {user.name}");
-                    }
+                    Console.WriteLine($"{user.id}  -  {user.name}");
                 }
                 else
                 {
