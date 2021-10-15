@@ -2,7 +2,7 @@
 using System;
 using UserDB;
 
-namespace AppContext
+namespace AutopoiskEFCore
 {
     public class Context :DbContext
     {
