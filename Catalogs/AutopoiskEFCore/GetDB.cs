@@ -1,6 +1,7 @@
 ﻿using System;
 using UserDB;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace AutopoiskEFCore
 {
@@ -8,18 +9,21 @@ namespace AutopoiskEFCore
     {
         static void Main(string[] args)
         {
-            User user = new User();
+            //List<User> user = new List<User>();
             using (var db = new Context())
             {
                 if (db.Database.CanConnect())
                 {
-                    var users = db.users;
+                    var users = db.autopoisktable.ToList();
                     Console.WriteLine("Получение обектов из бд");
-                    Console.WriteLine($"{user.id}  -  {user.name}");
+                    foreach (var user in users)
+                    {
+                        Console.WriteLine($"{user.id}  -  {user.name}");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Нет подключения к базе");
+                    Console.WriteLine("Нет подключения к бд");
                 }
             }
         }

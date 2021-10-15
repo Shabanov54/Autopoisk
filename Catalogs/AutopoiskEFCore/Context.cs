@@ -11,8 +11,7 @@ namespace AutopoiskEFCore
         string DBname = "AutopoiskDB";
         string Password = "!QAZxsw2";
         string Port = "5432";
-        // SSLMode = Prefer
-        public DbSet<User> users { get; set; }
+        public DbSet<User> autopoisktable { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql($"Server={Host};Username={User};Database={DBname};Password ={Password}; Port ={Port}");

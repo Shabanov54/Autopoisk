@@ -6,7 +6,7 @@ namespace UserDB
     public class User
     {
         [Key]
-        public int id { get; set; }
+        public long id { get; set; }
         public string name { get; set; }
     }
 }
